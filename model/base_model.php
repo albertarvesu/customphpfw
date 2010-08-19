@@ -39,11 +39,6 @@
             return false;
         }
 
-        /*
-         * Is this used to find the ID of the last row inserted? If
-         * so, then we should change this to use mysql_insert_id() if
-         * we're using MySQL. -aldous@sg.ibm.com
-         */
         public function findMax()
         {
             $sql = "SELECT MAX(".$this->primary.") AS max FROM ".$this->table;
